@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculador de efectividad</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        
+        <main>
+            <article>
+                <section id="sectionFormulario">
+                    <h3>Ingrese una nueva implementación</h3>
+
+                    <label>Tipo de energia
+                        <select id="iTipoDeEnergia">
+                            <option value="eolica">Eólica</option>
+                            <option value="hidroelectrica">Hidroeléctrica</option>
+                            <option value="solar">Solar</option>
+                        </select>
+                    
+                    <label>Descripción
+                        <input id="iDescripcion" type="text" required></label>
+                    
+                    <label>Energía generada (Kw / h)
+                        <input id="iEnergiaGenerada" type="text" required></label>
+                    
+                    <label>Presupuesto ($)
+                        <input id="iPresupuesto" type="text" required></label>
+                    
+                    <label>Tiempo estimado (meses)
+                        <input id="iTiempoEstimado" type="text" required></label>
+
+                    <button onclick="tomarDatos()">Agregar implementación</button>
+                    <button onclick="procesarDatos()">Procesar resultados</button>
+                </section>
+
+                <section id="sectionDatos">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de energía</th>
+                                <th>Descripción</th>
+                                <th>Energía generada (en Kw/h)</th>
+                                <th>Presupuesto ($)</th>
+                                <th>Tiempo estimado (en meses)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBodyDatos">
+                            
+                        </tbody>
+                    </table>
+
+                    <p id="pEfectividad"></p>
+
+                    <p id="pRecomendada"></p>
+                </section>
+            </article>
+        </main>
+
+        <script src="js/ingresoDeDatos.js"></script>
+    </body>
+</html>
